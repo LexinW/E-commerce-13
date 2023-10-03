@@ -3,7 +3,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
+// Test api/products
 router.get('/', async (req, res) => {
   try {
     const products = await Product.findAll({
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get one product
+// api/products/1
 router.get('/:id', async (req, res) => {
   try {
     const product = await Product.findByPk(req.params.id, {
@@ -39,7 +39,7 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-// create new product
+// test POST with below code
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
